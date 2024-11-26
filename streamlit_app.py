@@ -39,6 +39,11 @@ data = {'island':island,
 input_df = pd.DataFrame(data, index=[0])
 input_penguins = pd.concat([input_df, x_raw], axis=0)
 
+with st.expander('Input Features'):
+  st.write('*Input Penguin Data')
+  input_df
+  st.write('*Combined Penguin Data')
+  input_penguins
 
 #transform x
 encode = ['island', 'sex']
@@ -56,9 +61,7 @@ y = y_raw.apply(target_encode)
 y
 y_raw
 
-with st.expander('Input Features'):
-  st.write('*Input Penguin Data')
-  input_df
-  st.write('*Combined Penguin Data')
+with st.expander('Data Transformation'):
+  st.write('*Encoded Input Data')
   input_row
   
