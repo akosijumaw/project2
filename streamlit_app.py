@@ -28,3 +28,4 @@ with st.expander('Visualization'):
     culmen_length_mm = st.slider('Culmen length (mm)', 32.1, 59.6, 45.1)
     culmen_depth_mm = st.slider('Culmen depth (mm)', 13.1, 21.5, 18.5)
     flipper_length_mm = st.slider('Flipper length (mm)', 172.0, 231.0, 210.5)
+    body_mass_g = st.slider('Body mass (g)',2700.0, 6300.0, 4500.1)
