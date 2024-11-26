@@ -35,7 +35,7 @@ data = {'island':island,
         'culmen_depth_mm': culmen_depth_mm,
         'flipper_length_mm': flipper_length_mm,
         'body_mass_g': body_mass_g,
-        'gender': gender}
+        'sex': gender}
 input_df = pd.DataFrame(data, index=[0])
 input_penguins = pd.concat([input_df, x], axis=0)
 
@@ -44,3 +44,7 @@ with st.expander('Input Features'):
   input_df
   st.write('*Combined Penguin Data')
   input_penguins
+
+  #transform data
+  encode = ['island', 'sex']
+  df_penguins = pd.get_dummies(input_penguins, prefix=encode)
