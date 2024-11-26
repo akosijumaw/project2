@@ -20,3 +20,7 @@ with st.expander('Data'):
 
 with st.expander('Visualization'):
  st.scatter_chart(data=df,x='culmen_length_mm', y='body_mass_g', color='species')
+
+ with st.sidebar:
+    st.header('Input Feature')
+    island = st.selectbox('Island',('Biscoe','Dream','Torgersen'))
