@@ -25,5 +25,6 @@ with st.expander('Visualization'):
     st.header('Input Feature')
     island = st.selectbox('Island',('Biscoe','Dream','Torgersen'))
     gender = st.selectbox('Gender',('MALE','FEMALE'))
-    culmen_length_mm = st.slider('Culmen length (mm)', 32.1, 59.6, 43.9)
-    culmen_depth_mm = st.slider('Culmen depth (mm)', 172.0, 231.0, 201.0)
+    culmen_length_mm = st.slider('Culmen length (mm)', 32.1, 59.6, 45.1)
+    culmen_depth_mm = st.slider('Culmen depth (mm)', 172.0, 231.0, 210.5)
+    flipper_length_mm = st.slider('Flipper length (g)', 2700, 6300.0, 5007.2)
