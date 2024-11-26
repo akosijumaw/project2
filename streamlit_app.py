@@ -49,13 +49,5 @@ with st.expander('Input Features'):
   st.write('*Input Penguin Data')
   input_df
   st.write('*Combined Penguin Data')
-  input_penguins
-
-
-
-with st.expander('Input Features'):
-  st.write('*Input Penguin Data')
-  input_df
-  st.write('*Combined Penguin Data')
   input_row
   
