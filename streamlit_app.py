@@ -83,7 +83,36 @@ df_prediction_proba.rename(columns={0:'Adelie',1:'Chinstrap',2:'Gento'})
 
 #display predicted specie
 st.subheader('Prediced Species')
+
+
+
 df_prediction_proba
 
 penguin_species = np.array(['Adelie', 'Chinstrap','Gentoo'])
 st.success(str(penguin_species[prediction[0]]))
+
+st.dataframe(df_prediction_proba,
+        column_config={
+          'Adelie' : st.column_config.ProgressColumn(
+            'Adelie',
+            format='%f',
+            width='medium',
+            min_value=0,
+            max_value=1
+          ),
+            'Chinstrap' : st.column_config.ProgressColumn(
+            'Chinstrap',
+            format='%f',
+            width='medium',
+            min_value=0,
+            max_value=1
+          ),
+            'Gento' : st.column_config.ProgressColumn(
+            'Gento',
+            format='%f',
+            width='medium',
+            min_value=0,
+            max_value=1
+          ),
+        }, hide_index=True
+)
