@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
 
 st.title('🎈 Jumar Buladaco Project')
 
@@ -64,3 +65,11 @@ with st.expander('Data Preparation'):
   input_row
   st.write('*Encoded Y')
   y
+
+#train model
+clf = RandomForestClassifier()
+clf.fit(x_raw, y)
+
+#predict
+prediction = clf.predict(input_row)
+prediction_proba = clf.predict_proba(input_raw)
