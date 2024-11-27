@@ -85,11 +85,10 @@ df_prediction_proba.rename(columns={0:'Adelie',1:'Chinstrap',2:'Gento'})
 st.subheader('Prediced Species')
 
 
-
 df_prediction_proba
 
-penguin_species = np.array(['Adelie', 'Chinstrap','Gentoo'])
-st.success(str(penguin_species[prediction[0]]))
+
+
 
 st.dataframe(df_prediction_proba,
         column_config={
@@ -116,3 +115,6 @@ st.dataframe(df_prediction_proba,
           ),
         }, hide_index=True
 )
+
+penguin_species = np.array(['Adelie', 'Chinstrap','Gentoo'])
+st.success(str(penguin_species[prediction[0]]))
