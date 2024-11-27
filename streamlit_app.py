@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
+import numpy as np
 
 st.title('🎈 Jumar Buladaco Project')
 
@@ -74,6 +75,14 @@ clf.fit(x, y)
 #predict
 prediction = clf.predict(input_row)
 prediction_proba = clf.predict_proba(input_row)
+
 df_prediction_proba = pd.DataFrame(prediction_proba)
 df_prediction_proba.columns = ['Adelie', 'Chinstrap', 'Gento']
+
+
+#display predicted specie
+st.subheader('Prediced Species')
 df_prediction_proba
+
+penguin_species = np.array(['Adelie', 'Chinstrap','Gentoo'])
+st.success(str(penguin_species[prediction[0]]))
